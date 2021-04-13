@@ -9,6 +9,7 @@ html {
    --blue: #063cc5;
    --dark-blue: #041c4b;
    --logo-blue: #2786fc;
+   --blue-grey: #60678b;
 }
 
 h1 {
@@ -20,6 +21,13 @@ h1 {
 h2 {
    font-size: 1.2rem;
    line-height: 1.4;
+   margin-bottom: 1rem;
+   text-align: center;
+}
+
+a {
+   text-decoration: none;
+   color: #2786fc;
 }
 
 p {
@@ -96,6 +104,7 @@ sub {
 
    .info .signup:active {
       opacity: 70%;
+      transform: scale(0.97);
    }
 
    .top-nav li:hover{
@@ -153,35 +162,99 @@ sub {
          color: white;
       }
 
+      .hero button:active {
+         transform: scale(0.97);
+      }
+
 
 
 /* partners */
 
-.partners {
-   padding: var(--main-padding);
+.partners-section {
    background-color: var(--lightgrey);
+}
+
+.partners {
    height: 210px;
+   display: grid;
+   place-items: center;
+}
+
+.partners .subtitle {
+   text-transform: uppercase;
+   font-size: 0.8rem;
+   color: var(--blue-grey);
+}
+
+.partners .logos {
+   display: grid;
+   grid-auto-flow: column;
+   grid-auto-columns: 150px;
+
+   place-items: center;
+}
+
+.partners a {
+   font-size: 0.8rem;
+}
+
+.partners .logos img {
+   width: 130px;
 }
 
 /* deploy and scale seamlessly */
 
 .deploy {
-   padding: var(--main-padding);
    height: 550px;
+   display: grid;
+   place-items: center;
 }
+
+.deploy .deploy-grid {
+   display: grid;
+   grid-template: 
+      "list item1 item2" 1fr
+      "list item3 item4" 1fr /
+      200px 1fr 1fr;
+
+   grid-gap: 25px;
+   width: 90%;
+}
+
+.deploy .deploy-text {
+   text-align: center;
+}
+
+      .deploy .deploy-grid .list{
+         grid-area: list;
+
+         list-style: none;
+         padding-inline-start: 8px;
+         border-left: solid 1px var(--blue-grey);
+      }
+      .deploy .deploy-grid .item1{
+         grid-area: item1;
+      }
+      .deploy .deploy-grid .item2{
+         grid-area: item2;
+      }
+      .deploy .deploy-grid .item3{
+         grid-area: item3;
+      }
+      .deploy .deploy-grid .item4{
+         grid-area: item4;
+      }
 
 /* designed for developers */
 
 .developers {
    background-color: var(--lightgrey);
-   padding: var(--main-padding);
    height: 600px;
 }
 
 /* features */
 
 .features {
-   padding: var(--main-padding);
    height: 350px;
 }
 
@@ -189,7 +262,6 @@ sub {
 
 .regions {
    background-image: linear-gradient(180deg, #002ec4 0%, #002088 74%);
-   padding: var(--main-padding);
    height: 320px;
 }
 
@@ -197,7 +269,6 @@ sub {
 
 .carousel {
    background-color: var(--lightgrey);
-   padding: var(--main-padding);
    height: 560px;
 }
 
@@ -205,14 +276,12 @@ sub {
 
 .cta {
    background-image: linear-gradient(180deg, #002ec4 0%, #002088 74%);
-   padding: var(--main-padding);
    height: 200px;
 }
 
 /* footer */
 
 .footer {
-   padding: var(--main-padding);
    background-color: var(--dark-blue);
    height: 450px;
 }
