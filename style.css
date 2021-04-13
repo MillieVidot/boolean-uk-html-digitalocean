@@ -1,0 +1,218 @@
+* {
+   box-sizing: border-box;
+   margin: 0;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+   --lightgrey: rgb(235, 235, 235);
+   --blue: #063cc5;
+   --dark-blue: #041c4b;
+   --logo-blue: #2786fc;
+}
+
+h1 {
+   font-size:3rem;
+   line-height: 1;
+   margin-bottom: 1rem;
+}
+
+h2 {
+   font-size: 1.2rem;
+   line-height: 1.4;
+}
+
+p {
+   line-height: 1.6;
+}
+
+sub {
+   font-size: 0.6rem;
+}
+
+.blue {
+   color: var(--logo-blue);
+}
+
+.wrapper {
+   max-width: 1000px;
+   padding-left: 3rem;
+   padding-right: 3rem;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+/* top nav */
+
+.top-nav {
+   display: grid;
+   grid-auto-flow: column;
+   align-items: center;
+
+   height: 50px;
+   margin-top: 5px;
+   
+}
+
+.top-nav .logo {
+   display: grid;
+   width: 130px;
+}
+
+.top-nav ol {
+   padding-inline-start: 0;
+}
+
+.top-nav .services li {
+   display: inline-block;
+   padding: 5px 10px;
+   font-size: 0.9rem;
+}
+      .services .chevron {
+         width: 10px;
+      }
+
+.top-nav .info {
+   justify-self: right;
+}
+      
+.top-nav .info li {
+   display: inline-block;
+   padding: 5px 10px;
+   font-size: 0.9rem;
+}
+
+   .info .signup {
+      color: var(--logo-blue);
+      border: solid 1px var(--logo-blue);
+      border-radius: 3px;
+   }
+
+   .info .signup:hover {
+      color: white;
+      background-color: var(--logo-blue);
+      cursor: pointer;
+   }
+
+   .info .signup:active {
+      opacity: 70%;
+   }
+
+   .top-nav li:hover{
+      color: var(--logo-blue);
+      cursor: pointer;
+   }
+
+
+/* hero */
+
+.hero-section {
+   background-image: url("images/seascape.jpeg");
+   background-size: 100%;
+   background-position-y: -300px;
+}
+
+.hero {
+   height: 390px;
+
+   display: grid;
+   grid-template-columns: 3fr 2fr;
+   grid-gap: 40px;
+   align-items: center;
+}
+
+.hero .intro {
+   color: white;
+}
+
+.hero .card {
+   height: fit-content;
+   background-color: white;
+   border: solid 1px rgba(0, 0, 0, 0.1);
+   border-radius: 3px;
+   box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.15);
+   padding: 20px 15px;
+
+   text-align: center;
+}
+      .hero label input,
+      .hero label button {
+         display: block;
+         margin-top: 6px;
+         padding: 8px;
+         width: 100%;
+         background-color: white;
+         font-size: .7rem;
+         border: solid 1px rgba(0, 0, 0, 0.2);
+         border-radius: 4px;
+      }
+
+      .hero .create-button {
+         background-color: var(--logo-blue);
+         border: none;
+         color: white;
+      }
+
+
+
+/* partners */
+
+.partners {
+   padding: var(--main-padding);
+   background-color: var(--lightgrey);
+   height: 210px;
+}
+
+/* deploy and scale seamlessly */
+
+.deploy {
+   padding: var(--main-padding);
+   height: 550px;
+}
+
+/* designed for developers */
+
+.developers {
+   background-color: var(--lightgrey);
+   padding: var(--main-padding);
+   height: 600px;
+}
+
+/* features */
+
+.features {
+   padding: var(--main-padding);
+   height: 350px;
+}
+
+/* 12 regions */
+
+.regions {
+   background-image: linear-gradient(180deg, #002ec4 0%, #002088 74%);
+   padding: var(--main-padding);
+   height: 320px;
+}
+
+/* carousel */
+
+.carousel {
+   background-color: var(--lightgrey);
+   padding: var(--main-padding);
+   height: 560px;
+}
+
+/* cta */
+
+.cta {
+   background-image: linear-gradient(180deg, #002ec4 0%, #002088 74%);
+   padding: var(--main-padding);
+   height: 200px;
+}
+
+/* footer */
+
+.footer {
+   padding: var(--main-padding);
+   background-color: var(--dark-blue);
+   height: 450px;
+}
