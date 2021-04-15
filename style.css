@@ -212,7 +212,14 @@ justify-self: right;
    padding: 20px 15px;
 
    text-align: center;
+
+   transition: 300ms;
 }
+
+.hero .card:hover {
+   transform: scale(1.03);
+}
+
       .hero input,
       .hero button {
          display: block;
